@@ -41,7 +41,7 @@
 Navigate to your hugo project root and run:
 
 ```
-git submodule add https://github.com/alex-shpak/hugo-book themes/book
+git submodule add https://github.com/ethermol/hugo-book themes/book
 ```
 
 Then run hugo (or set `theme = "book"`/`theme: book` in configuration file)
@@ -57,7 +57,7 @@ Below is an example on how to create a new site from scratch:
 ```sh
 hugo new site mydocs; cd mydocs
 git init
-git submodule add https://github.com/alex-shpak/hugo-book themes/book
+git submodule add https://github.com/ethermol/hugo-book themes/book
 cp -R themes/book/exampleSite/content .
 ```
 

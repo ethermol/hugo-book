@@ -5,19 +5,6 @@ type: docs
 
 # Where abouts
 
-{{< columns >}}
-## Checking out Arch
+## About me
 
-Arch is a popular rolling release, security patches should be current.
-Arch doesn't have an installer, install from scratch only picking the packages which are needed.
-The end result is a minimalist, workflow basedi, installation providing a minimal attack surface.
-
-
-<--->
-
-## DevOps experience
-
-Designed to document and support my journey to DevOps certification.
-Will be architected as we go so further goals or end points are unknown at this point in time.
-Should give some handles to explore DevOps operations.
-{{< /columns >}}
+Recuperating from an eye disease I realized I'll have to change my workflow significantly. This caused the incarnation of this self imposed project called "The DevOps Society". This project will document the journey of my changing workflow and provide handles for enhancing DevOps experience with K8S, CI/CD and other automation tools needed to becoming a "certified professional DevOps" engineer. 
