@@ -3,39 +3,21 @@ title: Introduction
 type: docs
 ---
 
-# Acerbo datus maxime
+# Where abouts
 
 {{< columns >}}
-## Astris ipse furtiva
+## Checking out Arch
 
-Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
-olivae sensit **arma sorori** deducit, inesset **crudus**, ego vetuere aliis,
-modo arsit? Utinam rapta fiducia valuere litora _adicit cursu_, ad facies
+Arch is a popular rolling release, security patches should be current.
+Arch doesn't have an installer, install from scratch only picking the packages which are needed.
+The end result is a minimalist, workflow basedi, installation providing a minimal attack surface.
+
 
 <--->
 
-## Suis quot vota
+## DevOps experience
 
-Ea _furtique_ risere fratres edidit terrae magis. Colla tam mihi tenebat:
-miseram excita suadent es pecudes iam. Concilio _quam_ velatus posset ait quod
-nunc! Fragosis suae dextra geruntur functus vulgata.
+Designed to document and support my journey to DevOps certification.
+Will be architected as we go so further goals or end points are unknown at this point in time.
+Should give some handles to explore DevOps operations.
 {{< /columns >}}
-
-
-## Tempora nisi nunc
-
-Lorem **markdownum** emicat gestu. Cannis sol pressit ducta. **Est** Idaei,
-tremens ausim se tutaeque, illi ulnis hausit, sed, lumina cutem. Quae avis
-sequens!
-
-    var panel = ram_design;
-    if (backup + system) {
-        file.readPoint = network_native;
-        sidebar_engine_device(cell_tftp_raster,
-                dual_login_paper.adf_vci.application_reader_design(
-                graphicsNvramCdma, lpi_footer_snmp, integer_model));
-    }
-
-## Locis suis novi cum suoque decidit eadem
-
-Idmoniae ripis, at aves, ali missa adest, ut _et autem_, et ab?
