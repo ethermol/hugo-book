@@ -1,6 +1,6 @@
 ---
 title: Tools
-weight: 1
+weight: 2
 ---
 # Tools: Creating a K8S environment to be managed by CI/CD.
 Using tools to create Infra and providing Content. The toolset will provide the build environment to setup the infra, this documentation will provide the content part. The Infra that empowering the Documentation platform together with the Docuemntation itself (Content) will be used and extended while learning DevOps.

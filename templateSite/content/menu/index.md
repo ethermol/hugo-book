@@ -1,6 +1,7 @@
 ---
 headless: true
 ---
+- **Subjects**
 
 - **Shortcodes**
 - [Buttons]({{< relref "/docs/shortcodes/buttons" >}})
