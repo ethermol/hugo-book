@@ -1,5 +1,5 @@
 ---
-title: Tools ToC
+title: Tools
 weight: 1
 ---
 # Tools: Creating a K8S environment to be managed by CI/CD.

@@ -1,5 +1,5 @@
 ---
-title: Arch ToC
+title: Arch
 weight: 1
 ---
 # Arch workstation

@@ -1,5 +1,5 @@
 ---
-title: DevOps ToC
+title: DevOps
 weight: 1
 ---
 # DevOps Experience
