@@ -31,7 +31,7 @@ The repo used to contain the site contents is added as a submodule. The site con
 
 ## Content and Layout for the documentation-site will be stored in a separate repo.
 Within the hugo-book Arepo execute the following commands to get things going:
-'''zsh
+'''bash
 docker build -t hugo .
 docker run --name hugo --network host hugo
 

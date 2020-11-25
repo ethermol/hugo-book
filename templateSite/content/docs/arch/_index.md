@@ -1,4 +1,4 @@
----
+-
 title: Arch
 weight: 1
 ---
@@ -6,7 +6,7 @@ weight: 1
 Arch is rolling so arch is current. Arch can be setup and used as a minimalist distribution as such lowering the attack surface. The arch [archwiki](https://wiki.archlinux.org/) is top notch. The initial part of the installation is described at: [prepare_installation_medium](https://wiki.archlinux.org/index.php/installation_guide#Prepare_an_installation_medium).
 
 ## Prepare
-Plan the desired layout of the disk. In this case:
+Plan the desired layout of the disk. In this case: (HOW TO FIXed font ??)
 ```
 +---------------+----------------+----------------+----------------+
 |ESP partition: |Boot partition: |Volume 1:       |Volume 2:       |
@@ -37,7 +37,7 @@ sdb               8:16   0 476.9G  0 disk
 ## Boot from USB-stick
 - prepare medium
 - aquire installation image
-```
+```bash
 curl http://ftp.nluug.nl/os/Linux/distr/archlinux/iso/2020.10.01/archlinux-2020.10.01-x86_64.iso -o archlinux-2020.10.01-x86_64.iso
 curl http://ftp.nluug.nl/os/Linux/distr/archlinux/iso/2020.10.01/archlinux-2020.10.01-x86_64.iso.sig -o archlinux-2020.10.01-x86_64.iso.sig
 pacman-key -v archlinux-version-x86_64.iso.sig
@@ -48,7 +48,7 @@ sudo dd bs=16M if=path /to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 - verify boot mode
 - connect
 - update clock
-```
+```bash
 systemctl start gpm
 iwctl
 >station wlan0 connect mosGate
@@ -57,7 +57,7 @@ iwctl
 setfont ter-v24b
 ```
 ## Prepare Disk for crypted install
-```
+```bash
 gdisk /dev/sda
 # 0,n +512MB,ef00,n,<defaults>
 # ls /usr/share/kbd/keymaps/**/*.map.gz
@@ -71,7 +71,7 @@ timedatectl set-ntp true
 timedatectl status
 ```
 - partition and format, desired layout: sdb1 = 512MB efi, sdb2 <rest> 
-```
+```bash
    # parted/fdisk/cfdisk
 gdisk /dev/sdb
    # select o to cleanup
@@ -115,7 +115,7 @@ mount /dev/sda1 /mnt/boot
 ## Perform Minimal Arch install
 - select mirrors ==> /etc/pacman.d/mirrorlist
 - select packages to install
-```
+```bash
 pacman -S reflector
 pacstrap /mnt base base-devel linux linux-firmware lvm2 neovim git efibootmgr iwd
 ```
@@ -128,7 +128,7 @@ pacstrap /mnt base base-devel linux linux-firmware lvm2 neovim git efibootmgr iw
 - initramfs
 - root passwd
 - boot loader
-```
+```bash
    # # Generate fstab
 genfstab -pU /mnt >> /mnt/etc/fstab
    #
@@ -190,7 +190,7 @@ shutdown now
 ```
 ### Reboot
 ### Post Install
-```
+```bash
    # setup networking
    # systemctl enable iwd
    # systemctl start iwd
@@ -218,7 +218,7 @@ vim /etc/sudoers
    # # Reboot again, login as user, use sudo for installation all other software you want: drivers, display server, desktop environment, etc...
 ```   
 ## Add another crypted volume [optional]
-```
+```bash
    #### --> adding a encrypted data disk.
    # # Going to encrypt sda1
    # shred -v -n 1 /dev/sda1 # Skipped this . . .
@@ -243,7 +243,7 @@ vi /etc/fstab:
 
 ## Install tiling windows manager [spectrwm]
 Stil have some minor issues with this wm, fi apps initially start on wrong WorkSpace.
-```
+```bash
 pacman -S xf86-video-intel xf86-input-synaptics xorg xorg-init nitrogen picom lxappearance alacritty firefox spectrwm i3lock-color
 cp /etc/X11/xinit/xinitrc ${HOME}/.xinitrc
 cp /etc/spectrwm.conf ~/.config/spectrwm/spectrwm.conf
