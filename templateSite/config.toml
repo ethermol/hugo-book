@@ -105,3 +105,9 @@ enableGitInfo = true
   # /!\ This is an experimental feature, might be removed or changed at any time
   # (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.
   BookServiceWorker = true
+
+  # mos: use Chroma to color code blocks
+  # Also see: https://xyproto.github.io/splash/docs/all.html
+  pygmentsCodefences = true
+  pygmentsStyle = "vim"
+
