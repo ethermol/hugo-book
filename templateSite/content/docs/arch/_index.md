@@ -7,19 +7,19 @@ Arch is rolling so arch is current. Arch can be setup and used as a minimalist d
 
 ## Prepare
 Plan the desired layout of the disk. In this case: (HOW TO FIXed font ??)
-```
+```text
 +---------------+----------------+----------------+----------------+
 |ESP partition: |Boot partition: |Volume 1:       |Volume 2:       |
 |               |                |                |                |
 |/boot/efi      |/boot           |root            |swap            |
 |               |                |                |                |
 |               |                |/dev/vg0/root   |/dev/vg0/swap   |
-|/dev/sda1      |/dev/sda2       +----------------+----------------+
-|unencrypted    |LUKS encrypted  |/dev/sda3 encrypted LVM on LUKS  |
+|/dev/sdb1      |/dev/sdb2       +----------------+----------------+
+|unencrypted    |LUKS encrypted  |/dev/sdb3 encrypted LVM on LUKS  |
 +---------------+----------------+---------------------------------+
 ```
 P.S. while deploying only two of the partitions were created within the system partition (sdb). Only the 512M sized boot partition is left unencrypted. The laptop contains 2 drives (512GB and 2TB). The 512GB disk will be used as the system drive, the 2 TB drive will be set as the data-drive.
-```
+```text
 NAME            MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT
 sda               8:0    0   1.8T  0 disk
 └─sda1            8:1    0   1.8T  0 part
