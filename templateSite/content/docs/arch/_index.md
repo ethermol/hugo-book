@@ -6,7 +6,7 @@ weight: 1
 Arch is rolling so arch is current. Arch can be setup and used as a minimalist distribution as such lowering the attack surface. The arch [archwiki](https://wiki.archlinux.org/) is top notch. The initial part of the installation is described at: [prepare_installation_medium](https://wiki.archlinux.org/index.php/installation_guide#Prepare_an_installation_medium).
 
 ## Prepare
-Plan the desired layout of the disk. In this case: (HOW TO FIXed font ??)
+Plan the desired layout of the disk. In this case:
 ```text
 +---------------+----------------+----------------+----------------+
 |ESP partition: |Boot partition: |Volume 1:       |Volume 2:       |
