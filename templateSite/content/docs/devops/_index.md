@@ -6,34 +6,12 @@ weight: 3
 Will select an hands-on training course to get to the professional level. The index below will be updated while we go.
 
 ## Knoware
-This is a Hugo template knowledge base. Hugo presents HTML documents after converting them from MarkDown. Using this we have something to work for our DevOps ventures. Before that let's have some content here to start out: Adding color to code blocks
-
-| Pfx | Language                                                                                                                                                                                                  |
-|-----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| A   | ABAP, ABNF, ActionScript, ActionScript 3, Ada, Angular2, ANTLR, ApacheConf, APL, AppleScript, Arduino, Awk                                                                                                |
-| B   | Ballerina, Base Makefile, Bash, Batchfile, BibTeX, BlitzBasic, BNF, Brainfuck                                                                                                                             |
-| C   | C, C#, C++, Caddyfile, Caddyfile Directives, Cap'n Proto, Cassandra CQL, Ceylon, CFEngine3, cfstatement, ChaiScript, Cheetah, Clojure, CMake, COBOL, CoffeeScript, Common Lisp, Coq, Crystal, CSS, Cython |
-| D   | D, Dart, Diff, Django/Jinja, Docker, DTD                                                                                                                                                                  |
-| E   | EBNF, Elixir, Elm, EmacsLisp, Erlang                                                                                                                                                                      |
-| F   | Factor, Fish, Forth, Fortran, FSharp                                                                                                                                                                      |
-| G   | GAS, GDScript, Genshi, Genshi HTML, Genshi Text, Gherkin, GLSL, Gnuplot, Go, Go HTML Template, Go Text Template, GraphQL, Groovy                                                                          |
-| H   | Handlebars, Haskell, Haxe, HCL, Hexdump, HLB, HTML, HTTP, Hy                                                                                                                                              |
-| I   | Idris, Igor, INI, Io                                                                                                                                                                                      |
-| J   | J, Java, JavaScript, JSON, Julia, Jungle                                                                                                                                                                  |
-| K   | Kotlin                                                                                                                                                                                                    |
-| L   | Lighttpd configuration file, LLVM, Lua                                                                                                                                                                    |
-| M   | Mako, markdown, Mason, Mathematica, Matlab, MiniZinc, MLIR, Modula-2, MonkeyC, MorrowindScript, Myghty, MySQL                                                                                             |
-| N   | NASM, Newspeak, Nginx configuration file, Nim, Nix                                                                                                                                                        |
-| O   | Objective-C, OCaml, Octave, OpenSCAD, Org Mode                                                                                                                                                            |
-| P   | PacmanConf, Perl, PHP, PHTML, Pig, PkgConfig, PL/pgSQL, plaintext, Pony, PostgreSQL SQL dialect, PostScript, POVRay, PowerShell, Prolog, PromQL, Protocol Buffer, Puppet, Python, Python 3                |
-| Q   | QBasic                                                                                                                                                                                                    |
-| R   | R, Racket, Ragel, react, ReasonML, reg, reStructuredText, Rexx, Ruby, Rust                                                                                                                                |
-| S   | SAS, Sass, Scala, Scheme, Scilab, SCSS, Smalltalk, Smarty, Snobol, Solidity, SPARQL, SQL, SquidConf, Standard ML, Stylus, Swift, SYSTEMD, systemverilog                                                   |
-| T   | TableGen, TASM, Tcl, Tcsh, Termcap, Terminfo, Terraform, TeX, Thrift, TOML, TradingView, Transact-SQL, Turing, Turtle, Twig, TypeScript, TypoScript, TypoScriptCssData, TypoScriptHtmlData                |
-| V   | VB.net, verilog, VHDL, VimL, vue                                                                                                                                                                          |
-| W   | WDTE                                                                                                                                                                                                      |
-| X   | XML, Xorg                                                                                                                                                                                                 |
-| Y   | YAML, YANG                                                                                                                                                                                                |
-| Z   | Zig                                                                                                                                                                                                       |
+This is a Hugo template knowledge base. Hugo presents HTML documents after converting them from MarkDown. Using this we have something to work for our DevOps ventures. Before that let's have some content here to start out.
+## Building images
+The platform executing this application is t4g (graviton 2, AWS ARM64). The docker image will be build on my amd64 based laptop so we should cross-compile the docker image. In order to do this docker buildx (experimental) should be setup and configured. In the end we will execute: *docker buildx build --platform linux/arm,linux/arm64,linux/amd64 --tag pmostert/dmarc . --push* which will create and push (to docker hub) images for amd64 (pc), arm64(pi4, macBook m1) and arm (pi). Kubernetes installed and running on one of these platform should now be able to pull and run the knoware image.
+### Steps in the workflow (might change)
+* Change the site content in the ignite-doc repo and push changes to github.
+* Generate new Docker container images and push to Docker hub (public repo).
+* Generate new Kubernetes container or pull new site contents from github (public repo)
 ## CICD pipeline
-
+Somehow automate the steps above
