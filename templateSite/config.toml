@@ -1,6 +1,6 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL = 'http://blog.elft.net'
+baseURL = 'http://cms.elft.net'
 title = 'Hugo Book'
 theme = 'hugo-book'
 
